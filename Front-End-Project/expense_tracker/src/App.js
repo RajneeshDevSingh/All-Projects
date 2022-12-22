@@ -7,25 +7,25 @@ function App() {
       id:1,
       title:"Milk",
       amount:95,
-      date:new Date(2022 , 12 , 22)
+      date: new Date(2022, 7,20),
     },
     {
       id:2,
       title:"Water",
       amount:90,
-      date:new Date(2022 , 12 , 2)
+      date:new Date(2022, 11,20),
     },
     {
       id:3,
       title:"IceCream",
       amount:905,
-      date:new Date(2022 , 11 , 22)
+      date:new Date(2022, 11, 22),
     }
     ,{
       id:4,
       title:"Milk-Bar",
       amount:15,
-      date:new Date(2022 , 11 , 22)
+      date:new Date(2022, 11, 22),
     }
   ]
   return (
