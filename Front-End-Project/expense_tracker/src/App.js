@@ -1,10 +1,10 @@
 
 import './App.css';
-
+import ExpenseItems from './components/ExpenseItems';
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
+      <ExpenseItems/>
     </div>
   );
 }
