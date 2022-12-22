@@ -7,7 +7,7 @@ function App() {
       id:1,
       title:"Milk",
       amount:95,
-      date: new Date(2022, 7,20),
+      date: new Date(2022, 10,20),
     },
     {
       id:2,
