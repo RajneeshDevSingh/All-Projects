@@ -27,7 +27,13 @@ function App() {
       title:"Milk-Bar",
       amount:15,
       date:new Date(2022, 11, 22),
-    }
+    },
+    {
+      id:5,
+      title:"Car",
+      amount:90500,
+      date:new Date(2022, 10, 22),
+    },
   ]
   return (
     <div>
