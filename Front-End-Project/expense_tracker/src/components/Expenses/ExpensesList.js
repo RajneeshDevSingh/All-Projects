@@ -9,6 +9,9 @@ const ExpensesList = (props) => {
   }
 
   return (
+    <li>
+
+   
     <ul className='expenses-list'>
       {props.items.map((expense) => (
         <ExpenseItem
@@ -19,6 +22,7 @@ const ExpensesList = (props) => {
         />
       ))}
     </ul>
+    </li>
   );
 };
 
