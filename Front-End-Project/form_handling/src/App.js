@@ -1,4 +1,4 @@
-
+import Header from './Component/Header';
 import './App.css';
 
 function App() {
@@ -8,6 +8,7 @@ function App() {
         <h1>
               Hello 
         </h1>
+        <Header/>
       </div>
     </div>
   );
