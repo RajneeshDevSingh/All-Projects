@@ -1,15 +1,10 @@
-import Header from './Component/Header';
+import React from 'react';
 import './App.css';
-
+import AddUser from './Component/Users/AddUser';
 function App() {
   return (
     <div className="App">
-      <div className='form'>
-        <h1>
-              Hello 
-        </h1>
-        <Header/>
-      </div>
+        <AddUser/>
     </div>
   );
 }
