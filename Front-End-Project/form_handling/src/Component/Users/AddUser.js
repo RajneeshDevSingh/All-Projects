@@ -1,6 +1,7 @@
 import React from "react"
 import Card from "../UI/Card";
 import classes from "./AddUser.module.css"
+import Button from "../UI/Button";
 const AddUser = () => {
     const addUserHandler = (event) => {
         event.preventDefault();
@@ -12,10 +13,13 @@ const AddUser = () => {
                 <input id="username" type="text"></input>
                 <label htmlFor="age">Age</label>
                 <input id="age" type="number"></input>
-                <button type="submit">Add User</button>
+                <Button type="submit">Add User</Button>
             </form>
         </Card>
     )
 }
 
 export default AddUser;
+
+
+https://github.com/academind/react-complete-guide-code/blob/08-practice-project/code/07-adding-the-errormodal-component/src/components/UI/Button.js
