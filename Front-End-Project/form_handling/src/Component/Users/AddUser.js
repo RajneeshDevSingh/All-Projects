@@ -17,6 +17,14 @@ const AddUser = () => {
     }
     const addUserHandler = (event) => {
         event.preventDefault();
+        if(enteredUsername.trim().length === 0 || enteredUserage.trim().length === 0)
+        {
+            return ;
+        }
+        if(+enteredUserage < 1) // + to convert string to number
+        {
+            return ;
+        }
         console.log(enteredUserage , enteredUsername)
         setEnteredUserage('')
         setEnteredUsername('')
