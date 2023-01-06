@@ -1,18 +1,34 @@
-import React from "react"
+import React,{useState} from "react"
 import Card from "../UI/Card";
 import classes from "./AddUser.module.css"
 import Button from "../UI/Button";
 const AddUser = () => {
+    const [enteredUsername , setEnteredUsername] = useState("");
+    const [enteredUserage , setEnteredUserage] = useState("");
+     // [current state(snap sort) , function that can change the state of component]
+    const usernameChangeHandler = (event) =>
+    {
+        setEnteredUsername(event.target.value);
+    }
+
+    const useragechangeHandler = (event) =>
+    {
+        setEnteredUserage(event.target.value);
+    }
     const addUserHandler = (event) => {
         event.preventDefault();
+        console.log(enteredUserage , enteredUsername)
+        setEnteredUserage('')
+        setEnteredUsername('')
     }
+    
     return (
         <Card className={classes.input}>
             <form onSubmit={addUserHandler}>
                 <label htmlFor="username">UserName</label>
-                <input id="username" type="text"></input>
+                <input id="username" type="text" value={enteredUsername} onChange={usernameChangeHandler}></input>
                 <label htmlFor="age">Age</label>
-                <input id="age" type="number"></input>
+                <input id="age" type="number" value={enteredUserage} onChange={useragechangeHandler}></input>
                 <Button type="submit">Add User</Button>
             </form>
         </Card>
