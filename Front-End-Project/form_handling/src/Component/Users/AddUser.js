@@ -2,7 +2,7 @@ import React,{useState} from "react"
 import Card from "../UI/Card";
 import classes from "./AddUser.module.css"
 import Button from "../UI/Button";
-const AddUser = () => {
+const AddUser = (props) => {
     const [enteredUsername , setEnteredUsername] = useState("");
     const [enteredUserage , setEnteredUserage] = useState("");
      // [current state(snap sort) , function that can change the state of component]
@@ -25,6 +25,8 @@ const AddUser = () => {
         {
             return ;
         }
+
+        props.onAddUser(enteredUsername , enteredUserage);
         console.log(enteredUserage , enteredUsername)
         setEnteredUserage('')
         setEnteredUsername('')
