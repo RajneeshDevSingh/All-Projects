@@ -10,7 +10,7 @@ function Navbar() {
         </a>
         <div>
           <ul className='navbar'>
-            <li><a href='index.html'>Home</a></li>
+            <li><a className='active' href='index.html'>Home</a></li>
             <li><a href='index.html'>about</a></li>
             <li><a href='index.html'>Contact</a></li>
             <li><a href='index.html'>Sign up</a></li>
