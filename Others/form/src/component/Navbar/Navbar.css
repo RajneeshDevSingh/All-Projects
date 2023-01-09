@@ -48,3 +48,19 @@ nav{
     bottom: -1px;
     left: 30px;
 }
+
+.form_container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 15rem;
+}
+
+.form_container  form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2rem;
+
+}

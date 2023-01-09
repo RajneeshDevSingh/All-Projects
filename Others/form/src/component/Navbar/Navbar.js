@@ -16,7 +16,20 @@ function Navbar() {
             <li><a href='index.html'>Sign up</a></li>
           </ul>
         </div>
+        {/* <div className='mobile'>
+            <i className="fa-solid fa-bars"></i>
+        </div>
+        <div className='mobile'>
+            <i className="fa-solid fa-times"></i>
+        </div> */}
       </nav>
+      <div className='form_container'>
+        <form>
+          <input type="text"></input>
+          <input type="password"></input>
+          <button type='submit'>Sign in</button>
+        </form>
+      </div>
     </div>
   )
 }
