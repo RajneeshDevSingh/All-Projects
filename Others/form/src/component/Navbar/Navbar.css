@@ -2,8 +2,8 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(168, 232, 49);
-    padding: 10px 18px; 
+    background-color: rgb(16, 162, 211);
+    padding: 6px 18px; 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
 }
 
