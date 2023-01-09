@@ -55,12 +55,14 @@ nav{
     justify-content: center;
     align-items: center;
     line-height: 15rem;
+    border: 2px solid red;
+    margin-top: 5rem;
 }
 
-.form_container  form{
+.form_container  form input{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem 2rem;
+    padding: 1rem 2rem;
 
 }
