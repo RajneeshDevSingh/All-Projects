@@ -1,4 +1,4 @@
-import React , {useState}from 'react'
+import React , {useState , useEffect}from 'react'
 import "./Navbar.css"
 function Navbar() {
 
@@ -7,6 +7,13 @@ function Navbar() {
   const [password, setPassword] = useState('');
   const [isLoggedin, setIsLoggedin] = useState(false);
  
+  useEffect(()=> {
+    const loginUser = localStorage.getItem('userData')
+    if(!loginUser)
+    {
+      setIsLoggedin(true);
+    }
+  } , []);
   const login = (e) => {
     e.preventDefault();
     console.log(name, email, password);
@@ -49,7 +56,7 @@ function Navbar() {
         </div> */}
       </nav>
       <div style={{ textAlign: 'center' }}>
-      <h1>This is React WebApp </h1>
+      <h1>Thank you master  </h1>
       {!isLoggedin ? (
         <>
           <form action="">
