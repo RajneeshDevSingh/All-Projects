@@ -11,7 +11,7 @@ function Navbar() {
     const loginUser = localStorage.getItem('userData')
     if(!loginUser)
     {
-      setIsLoggedin(true);
+       
     }
   } , []);
   const login = (e) => {

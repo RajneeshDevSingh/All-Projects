@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className='footer'>
        <div className='Movie App'>Movie App</div>
-       <div>@2022, Movie App , Fill Free to use</div>
+       <div>@2023 Movies App, Don't think feel Free to use</div>
     </div>
   )
 }
