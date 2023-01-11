@@ -6,14 +6,17 @@ function Navbar() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoggedin, setIsLoggedin] = useState(false);
+  const [isUser, setIsUser] = useState(false)
  
   useEffect(()=> {
-    const loginUser = localStorage.getItem('userData')
+    const loginUser = localStorage.getItem('token-info')
     if(!loginUser)
     {
-       
+       setIsUser(false)
+    }else{
+      setIsUser(true)
     }
-  } , []);
+  } , [isUser]);
   const login = (e) => {
     e.preventDefault();
     console.log(name, email, password);
