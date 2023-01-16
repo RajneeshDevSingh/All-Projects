@@ -26,6 +26,8 @@ const ModalOverlay= () =>
 }
 
 const portalElement = document.getElementById('overlays');
+
+// change the props
 const Model = (props) => {
   return (
     <Fragment>
