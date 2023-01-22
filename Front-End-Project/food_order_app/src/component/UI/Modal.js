@@ -13,7 +13,7 @@ const Backdrop = (props)=>
         </div>
     )
 }
-const ModalOverlay= () =>
+const ModalOverlay= (props) =>
 {
     return(
         <div className={classes.model}>
@@ -28,7 +28,7 @@ const ModalOverlay= () =>
 const portalElement = document.getElementById('overlays');
 
 // change the props
-const Model = (props) => {
+const Modal = (props) => {
   return (
     <Fragment>
         {ReactDOM.createPortal(<Backdrop/> , portalElement)}
@@ -37,4 +37,4 @@ const Model = (props) => {
   )
 }
 
-export default Model
+export default Modal
