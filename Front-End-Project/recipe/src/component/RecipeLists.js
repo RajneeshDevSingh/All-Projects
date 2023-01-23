@@ -7,7 +7,7 @@ function RecipeLists() {
         <div className='heading-line'>
             <strong>Search Recipes</strong>
             <div className='input-wrapper' >
-                <input type="text" placeholder='Search' />
+                <input type="text" placeholder='Search Your Recipe' />
                 <button ><BsSearch /></button>
             </div> 
         </div>
