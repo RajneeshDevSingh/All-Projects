@@ -1,3 +1,4 @@
+@import "./media.scss";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Rokkitt:wght@400;700&display=swap');
 body {
   background-color: #f2f2f2;
@@ -72,14 +73,23 @@ p{
         color: #fff;
         margin-bottom: 15px;
         font-size: 35px;
-    
+        @include medium {
+          
+          font-size: 45px;
+         }
+        
       }
+        
     
       p
       {
         font-size: 24px;
         color: #fff;
     
+        @include medium {
+            
+          font-size: 24px;
+         }
       }
   
     }
@@ -111,13 +121,29 @@ p{
     gap:5px;
     position: relative;
     cursor: pointer;
+    @include medium {
+          
+     height: 100px;
+     }
+     @include default {
+          
+      height: 120px;
+      }
     svg{
-      font-size: 50px;
+      font-size: 35px;
+      @include medium {
+          
+        font-size: 50px;
+        }
 
     }
 
     span{
-      font-size: 18px;
+      font-size: 14px;
+      @include medium {
+          
+        font-size: 18px;
+        }
       
     }
     
@@ -135,10 +161,17 @@ p{
       &::after{
         position: absolute;
         content: '';
+        border-top: 15px solid #6fcb9f;
+        border-left: 15px solid transparent;
+        border-right: 10px solid transparent;
+        bottom:  -15px;
+        @include medium {
+          
         border-top: 20px solid #6fcb9f;
         border-left: 20px solid transparent;
         border-right: 20px solid transparent;
         bottom:  -20px;
+          }
   
       }
 
@@ -151,14 +184,24 @@ p{
 .recipe_banner
 {
   background-color: #29336b;
-  padding: 60px 40px;
+  padding: 20px;
   color: #fff;
   display: flex;
   margin-bottom: 70px;
+  flex-direction: column-reverse;
+  @include medium
+  {
+    padding: 60px 40px;
+    flex-direction: row;
+  }
+  
   
   .left-col
   {
-    width: 50%;
+   
+    @include medium {
+      width: 50%;
+    }
     .badge{
       background-color: #6fcb9f;
       padding: 5px;
@@ -203,10 +246,13 @@ p{
         list-style: none;
 
         li{
-          width: calc(50% - 20px);
           display: flex;
           font-size: 18px;
-          // align-items: center;
+          margin-bottom: 10px;
+          @include medium {
+            width: calc(50% - 20px);
+            margin-bottom: 10px;
+          }
 
           svg{
             width: 18px;
@@ -224,20 +270,34 @@ p{
 
   .right-col
   {
-    width: 50%;
+    
     display:flex ;
     padding-top: 50px;
     justify-content: center;
     align-items: center;
+    @include medium {
+      width: 50%;
+    }
     .image-wrapper{
-      width: 350px;
+      width: 100%;
       height: 350px;
+      margin-bottom: 30px;
+      @include medium
+      {
+        width: 280px;
+         height: 280px;
+      }
 
       img{
         width: 100%;
         height: 100%;
+        margin-top: 20px;
         object-fit: cover;
-        border-radius: 50%;
+        
+        @include medium {
+          border-radius: 50%;
+          
+        }
       }
     }
     
@@ -250,20 +310,23 @@ p{
 
 .heading-line{
   padding: 10px 0;
-  font-size: 45px;
+  font-size: 35px;
   text-align: center;
   margin-top: 50px;
   color: #6fcb9f;
+  @include medium{
+    font-size: 45px;
+  }
 
 
   .input-wrapper
   {
     display: flex;
-    width: 80%;
-    padding: 20px;
+    width: 100%;
+    padding:30px  20px;
     justify-content: center;
     margin: 0 auto;
-
+   
 
 
     input{
@@ -306,11 +369,23 @@ p{
   
   margin-bottom: 70px;
 
+  
+
   .flexItem{
     background-color: #fff;
     border-radius: 6px;
     overflow: hidden;
-    width: calc(100% /  4  - 20px);
+    width: 100%;
+    margin-bottom: 20px;
+    @include small {
+      width: calc(100% /  2  - 20px);
+    
+    }
+
+    @include default {
+      width: calc(100% /  4  - 20px);
+    
+    }
 
 
 
