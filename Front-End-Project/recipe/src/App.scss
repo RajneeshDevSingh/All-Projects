@@ -65,13 +65,13 @@ p{
   }
 
   .header-text{
-      padding: 100px;
+      padding-top: 100px;
       padding-bottom: 125px;
       text-align: center;
       h1{
         color: #fff;
         margin-bottom: 15px;
-        font-size: 45px;
+        font-size: 35px;
     
       }
     
@@ -206,7 +206,7 @@ p{
           width: calc(50% - 20px);
           display: flex;
           font-size: 18px;
-          align-items: center;
+          // align-items: center;
 
           svg{
             width: 18px;

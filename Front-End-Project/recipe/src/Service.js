@@ -30,7 +30,7 @@ export const fetchTabata = async (defaultQuery)=>
     const {app_id , app_key} = queryStrings;
 
     try{
-        const data = await fetch(`https://api.edamam.com/api/recipes/v2/${defaultQuery}?type=public&app_id=${app_id}&app_key=${app_key}`)
+        const data = await fetch(`https://api.edamam.com/api/recipes/v2/${defaultQuery}?type=public&app_id=${app_id}&app_key=${app_key}`);
         const response =  data.json();
         // console.log(response);
         return response;

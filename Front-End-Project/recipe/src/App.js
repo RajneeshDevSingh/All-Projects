@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="main">
       <Header/>
-      <Tabs/>
+      <Tabs  setLoader={setLoader}/>
       <RecipeLists setLoader={setLoader}/>
       {loader && <div className="loader">
         <div className="spinner"></div>
