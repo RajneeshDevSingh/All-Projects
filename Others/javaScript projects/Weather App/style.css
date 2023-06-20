@@ -1,0 +1,35 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: rgb(50, 194, 210);
+}
+
+
+.container
+{
+    height: 20rem;
+    width: 25rem;
+    border: 2px solid greenyellow;
+    background-color: azure;
+    margin: 5rem auto;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px;
+    text-align: center;
+    padding: 3px;
+}
+
+
+form{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px auto;
+}
+
+
+
