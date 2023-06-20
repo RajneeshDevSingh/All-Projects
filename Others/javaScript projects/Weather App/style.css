@@ -32,4 +32,28 @@ form{
 }
 
 
+form input[type="text"]
+{
+    padding: 7px;
+    font-size: 15px;
+    border-radius: 7px;
+    border: 2px solid greenyellow;
+    width: 50%;
+}
 
+
+form input[type="submit"]
+{
+    border-radius: 7px;
+    border: 2px solid greenyellow;
+    width: 20%;
+    font-size: 15px;
+    
+}
+
+form input[type="submit"]:hover
+{
+    cursor: pointer;
+    transition: background-color rgb(45, 45, 225) .3S ease;
+
+}
