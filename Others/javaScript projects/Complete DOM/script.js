@@ -32,9 +32,15 @@ li.innerText = "Thor";
 
 // modifying attributes & classes
 
-li.setAttribute('class','list-items')
+// li.setAttribute('class','list-items')
+             // or
+li.classList.add("list-items")
 
 // adding li into ul
 
 ul.append(li)
+
+console.log(ul.firstChild)
+console.log(ul.lastChild)
+console.log(ul.childNodes)
 
