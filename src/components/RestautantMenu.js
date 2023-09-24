@@ -12,17 +12,7 @@ const RestaurantMenu = () =>
 
 
     const resInfo = useRestaurantMenu(resId);
-    // const fetchMenu = async () => {
 
-    //     // https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.4921556&lng=77.09660869999999&restaurantId=366961&catalog_qa=undefined&submitAction=ENTER
-       
-    //         // const data = await  fetch(MENU_API + 366961);
-    //         const data = await fetch(MENU_API + resId);
-    //         const json = await data.json();
-    //         setResInfo(json.data); 
-    //         // console.log("I am from RestMenu data -:", json.data);
-
-    //     }
 
         if(resInfo == null)
         {

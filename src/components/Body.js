@@ -51,7 +51,7 @@ const Body = () => {
           />
 
           <button
-            className="sr-only"
+            className="my-5 px-2 rounded-md bg-gray-100 hover:bg-white "
             onClick={() => {
               console.log(SearchText);
 
