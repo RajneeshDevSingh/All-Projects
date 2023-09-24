@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body
+{
+    background-color: aqua;
+}
+
+
+.header
+{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+   
+
+    height: 3rem;
+    width: 100%;
+    background-color: blueviolet;
+
+    padding: 2rem;
+}
+
+.logo
+{
+   height: 3.5rem;
+   width: 3.5rem;
+   border-radius: 50%;
+
+}
+
+
+.nav-items > ul
+{
+    display: flex;
+    
+    margin: 2rem;
+
+    justify-content: space-between;
+    list-style: none;
+    font-weight: bolder;
+
+
+}
+
+
+.nav-items > ul > li
+{
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.restaurant-container
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    padding: 1rem;
+    
+}
+.res-card
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    flex-wrap: wrap;
+    
+    width: 15rem;
+    height: 25rem;
+    background-color: azure;
+    border-radius: 1rem;
+
+}
+
+.res-card:hover
+{
+    border: 2px solid magenta;
+}
+
+.res-card > img
+{
+    padding: 10px 10px;
+    margin-top: -20px;
+    height: 15rem;
+    width: 100%;
+    border-radius: 2rem;
+}
+
+.other-data
+{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between ;
+    flex-wrap: wrap;
+    padding: 1rem;
+    margin-top: -65px;
+}
+
+
+
+
+.FakeUICard-Container
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    padding: 1rem;
+}
+
+
+.UICard
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    flex-wrap: wrap;
+    
+    width: 15rem;
+    height: 25rem;
+    background-color: rgb(101, 127, 127);
+    border-radius: 1rem;
+}
+
+
+.search
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(14, 152, 227);
+
+    height: 3rem;
+    margin: 1rem , 1rem;
+
+}
+
+.ErrorPage
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top:8rem;
+    font-weight: bolder;
+    gap: 1.5rem;
+}
+
+.ErrorPage > img{
+    height: 25em;
+    width: 20rem;
+    border-radius: 2rem;
+
+   
+}
+
+.RestaurantMenu
+{
+    margin: auto 20%;
+}
+
+.RestaurantMenu > ul{
+    list-style: none;
+    font-size: 25px;
+    font-weight: bolder;
+    color: blueviolet;
+
+}
+
+.dynImg
+{
+    height: 20rem;
+    width: 20rem;
+    border-radius: 2rem;
+    margin-top: 2rem;
+} */
