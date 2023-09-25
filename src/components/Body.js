@@ -40,7 +40,7 @@ const Body = () => {
 
   return (
     <div className="">
-      <div className="flex justify-around bg-slate-400">
+      <div className="flex justify-around bg-orange-300">
         <div className="flex">
           <input
             className="m-5 p-10 placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search for anything..."
@@ -70,7 +70,7 @@ const Body = () => {
         </div>
 
         <button
-          className="filter"
+          className="my-5 px-2 rounded-md bg-gray-100 hover:bg-white "
           onClick={() => {
             const filteredList = ListofRestaurant.filter(
               (res) => res.info.avgRating > 4
@@ -80,11 +80,11 @@ const Body = () => {
             // console.log(filteredList);
           }}
         >
-          Filter
+          Top Rated Restaurant
         </button>
       </div>
 
-      <div className="restaurant-container">
+      <div className="flex flex-wrap justify-evenly">
         {filterRestaurant.map((restaurant) => (
           // <RestaurantCard key={restaurant.data.id} resData={restaurant}/>
 
