@@ -39,11 +39,11 @@ const Body = () => {
 
 
   return (
-    <div className="">
-      <div className="flex justify-around bg-orange-300">
+    <div className="bg-neutral-500">
+      <div className="flex justify-around bg-zinc-200">
         <div className="flex">
           <input
-            className="m-5 p-10 placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search for anything..."
+            className="m-5 p-10 placeholder:text-slate-400 block bg-white w-full border border-neutral-500 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none  focus:ring-black focus:ring-1 sm:text-sm" placeholder="Search for anything..."
             value={SearchText}
             onChange={(e) => {
               setSearchRestaurat(e.target.value);
@@ -70,7 +70,7 @@ const Body = () => {
         </div>
 
         <button
-          className="my-5 px-2 rounded-md bg-gray-100 hover:bg-white "
+          className="my-5 px-2 rounded-md bg-gray-100 hover:bg-white  focus:ring-black focus:ring-1"
           onClick={() => {
             const filteredList = ListofRestaurant.filter(
               (res) => res.info.avgRating > 4
