@@ -1,5 +1,5 @@
 import React from "react";
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard  from "./RestaurantCard";
 import FakeUIShimmer from "./utils/FakeUIShimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "./utils/useOnlineStatus";
@@ -9,6 +9,8 @@ const Body = () => {
   const [ListofRestaurant, setListofRestaurant] = useState([]);
   const [SearchText, setSearchRestaurat] = useState("");
   const [filterRestaurant, setfilterRestaurant] = useState([]);
+
+ 
 
   useEffect(() => {
     fetchData();
@@ -88,7 +90,7 @@ const Body = () => {
         {filterRestaurant.map((restaurant) => (
           // <RestaurantCard key={restaurant.data.id} resData={restaurant}/>
 
-          <Link to={"/restaurants/"+restaurant.info.id} key={restaurant.info.id}> <RestaurantCard  resData={restaurant} /></Link>
+          <Link to={"/restaurants/"+restaurant.info.id} key={restaurant.info.id}> <RestaurantCard  resData={restaurant} /> </Link>
         ))}
       </div>
     </div>

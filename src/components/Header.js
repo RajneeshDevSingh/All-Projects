@@ -9,6 +9,14 @@ const Header = ()=>
                 <img className="w-24 rounded-lg" src="https://t3.ftcdn.net/jpg/01/10/15/24/240_F_110152426_L5NOFHFAug9uH4jCKVQZ36mdq043i99t.jpg"/>
             </div>
 
+
+
+
+
+
+
+
+
             <div className="flex mt-3 font-sans text-2xl font-bold ">
                 <ul className="flex justify-around gap-x-8">
                     <li className="hover:text-slate-800 text-white"><Link to="/">Home</Link></li>
