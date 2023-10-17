@@ -46,7 +46,7 @@ const RestaurantMenu = () => {
         {/* categories accordions ////////////////////////////////////////     key={category.card.card.itemCards.card.info.id}               */}
       </div>
       <div className="p-4 mx-auto my-4 max-w-6xl  items-center justify-center rounded-xl  shadow-xl bg-gray-300 border-solid border-4 border-white">
-        {categories.map((category) => (<RestaurantCategory data={category.card.card} />))}
+        {categories.map((category) => (<RestaurantCategory data={category.card.card} key={category.card.card.title}/>))}
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ const Body = () => {
   const [SearchText, setSearchRestaurat] = useState("");
   const [filterRestaurant, setfilterRestaurant] = useState([]);
 
- 
+  // https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.4921556&lng=77.09660869999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING
 
   useEffect(() => {
     fetchData();
@@ -35,7 +35,7 @@ const Body = () => {
 
   if(OnlineStatus == false) return <h1>Looks like you are offline! Please check your internet connection</h1>
 
-  if (ListofRestaurant.length == 0) {
+  if (ListofRestaurant.length == null) {
     return <FakeUIShimmer />;
   }
 
