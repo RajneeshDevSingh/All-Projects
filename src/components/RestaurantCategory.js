@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import ItemList from "./ItemList";
 
-function RestaurantCategory(props) {
-  const [showItems , setShowItems] = useState(false)
-  
+function RestaurantCategory({data, showItems , setShowIndex}) {
+ 
   const handleClick = ()=>
   {
-    setShowItems(!showItems);
+    setShowIndex();
   }
 
   return (
@@ -15,7 +14,7 @@ function RestaurantCategory(props) {
         <div className="flex flex-wrap justify-between cursor-pointer" onClick={handleClick}>
         <div className="">
           <span className="font-bold ">
-            {props.data.title} ({props.data.itemCards.length})
+            {data.title} ({data.itemCards.length})
           </span>
         </div>
 
@@ -24,7 +23,7 @@ function RestaurantCategory(props) {
 
     
         <div>
-        {showItems && <ItemList items={props.data.itemCards} />}
+        {showItems && <ItemList items={data.itemCards} />}
         </div>
       
       </div>

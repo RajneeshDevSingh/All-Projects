@@ -12,6 +12,7 @@ const ItemList = ({ items }) => {
           <div className="flex flex-col w-8/12">
             <div className="">
                 <span className="font-sans ">{item.card.info.name}</span>
+                {/* <span className=""> ₹ {item.card.info.costForTwo}</span> */}
                 <span className=""> ₹ {item.card.info.price ? item.card.info.price/100 : item.card.info.defaultPrce/100}</span>
             </div>
             <div>

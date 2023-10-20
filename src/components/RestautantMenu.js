@@ -6,6 +6,7 @@ import RestaurantCategory from "./RestaurantCategory";
 
 const RestaurantMenu = () => {
   // const [resInfo , setResInfo] = useState([]); this will handle by custom hook
+  const [showIndex, setShowIndex] = useState(null);
 
   const { resId } = useParams();
 
@@ -46,7 +47,12 @@ const RestaurantMenu = () => {
         {/* categories accordions ////////////////////////////////////////     key={category.card.card.itemCards.card.info.id}               */}
       </div>
       <div className="p-4 mx-auto my-4 max-w-6xl  items-center justify-center rounded-xl  shadow-xl bg-gray-300 border-solid border-4 border-white">
-        {categories.map((category) => (<RestaurantCategory data={category.card.card} key={category.card.card.title}/>))}
+        {categories.map((category, index) => (<RestaurantCategory
+         data={category.card.card} 
+         key={category.card.card.title} 
+         showItems={index == showIndex ? true : false}
+         setShowIndex ={()=> setShowIndex(index)}
+         />))}
       </div>
     </div>
   );
