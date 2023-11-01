@@ -7,7 +7,9 @@ function RestaurantCategory({data, showItems , setShowIndex}) {
   {
     setShowIndex();
   }
- // just check
+ 
+
+  // last check
   return (
     
       <div className="p-4 mx-auto my-4 max-w-6xl rounded-xl  shadow-xl bg-stone-200-300 border-solid border-4 border-white">
