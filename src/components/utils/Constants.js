@@ -6,3 +6,8 @@ export const LOGO_URL =
 
 export const MENU_API =
   "https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.4921556&lng=77.09660869999999&restaurantId=";
+
+
+
+
+  // https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/
