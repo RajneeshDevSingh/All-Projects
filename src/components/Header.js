@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import UserContext from "./utils/UserContext";
 
 const Header = ()=>
 {
+    const {loggedInuser} = useContext(UserContext);
     return(
         <div className="flex justify-between px-10 py-3 bg-neutral-500 shadow-sm">
             <div className="logo-container">
@@ -23,6 +25,7 @@ const Header = ()=>
                     <li className="hover:text-slate-800 text-white"><Link to="/about">About</Link></li>
                     <li className="hover:text-slate-800 text-white"><Link to="/contact">Contact</Link></li>
                     <li className="hover:text-slate-800 text-white">Cart</li>
+                    <li className="hover:text-slate-800 text-white">{loggedInuser}</li>
                 </ul>
             </div>
         </div>
