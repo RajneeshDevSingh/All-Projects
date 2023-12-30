@@ -1,9 +1,18 @@
 import React from "react";
 import { CDN_URL } from "./utils/Constants";
-
+import { useDispatch } from "react-redux";
+import { addItem, removeItem } from "./utils/CartSlice";
 
 
 const ItemList = ({ items }) => {
+  const dispatch = useDispatch()
+  const HandleAddItem =(item)=>
+  {
+    // Dispatch an acion
+    //dispatch(addItem(Action.payload))
+    dispatch(addItem(item));
+  }
+
   return (
     <div >
       {items.map((item) => (
@@ -23,8 +32,7 @@ const ItemList = ({ items }) => {
                 <img  className="h-auto w-max object-cover " src={CDN_URL+item.card.info.imageId} alt="img"/>
             </div>
            <div className="w-22 mx-5 h-12 mt-10 flex border-solid border-2  rounded-xl">
-            <button className="w-14 border-solid border-2 bg-black rounded-xl ">➖</button>
-            <button className="w-14 border-solid border-2 bg-black rounded-xl "> ➕</button>
+            <button className="w-14 border-solid border-2 bg-black rounded-xl " onClick={()=> HandleAddItem(item)}> ➕</button>
            </div>
 
         </div>

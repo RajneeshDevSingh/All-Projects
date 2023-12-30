@@ -22,19 +22,20 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING"
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.4921556&lng=77.09660869999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
  
+    
 
 
-
-
+    
     const json = await data.json();
+    // console.log(json)
     setListofRestaurant(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setfilterRestaurant(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
 
@@ -43,13 +44,12 @@ const Body = () => {
 
   if(OnlineStatus == false) return <h1>Looks like you are offline! Please check your internet connection</h1>
 
-  if (ListofRestaurant.length == 0) {
-    return <FakeUIShimmer />;
-  }
+  // if (ListofRestaurant.length == 0) {
+  //   return <FakeUIShimmer />;
+  // }
 
-
-  return (
-    <div className="bg-neutral-500">
+  return  ListofRestaurant.length === 0?(<FakeUIShimmer />):(
+    <div className=""> 
       <div className="flex justify-around bg-zinc-200">
         <div className="flex">
           <input

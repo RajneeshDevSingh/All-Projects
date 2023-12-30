@@ -2,9 +2,11 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import UserContext from "./utils/UserContext";
 
+import { useSelector } from "react-redux";
 const Header = ()=>
 {
     const {loggedInuser} = useContext(UserContext);
+    const cartItems = useSelector((store)=> store.cart.items)
     return(
         <div className="flex justify-between px-10 py-3 bg-neutral-500 shadow-sm">
             <div className="logo-container">
@@ -14,17 +16,12 @@ const Header = ()=>
 
 
 
-
-
-
-
-
             <div className="flex mt-3 font-sans text-2xl font-bold ">
                 <ul className="flex justify-around gap-x-8">
                     <li className="hover:text-slate-800 text-white"><Link to="/">Home</Link></li>
                     <li className="hover:text-slate-800 text-white"><Link to="/about">About</Link></li>
                     <li className="hover:text-slate-800 text-white"><Link to="/contact">Contact</Link></li>
-                    <li className="hover:text-slate-800 text-white">Cart</li>
+                    <li className="hover:text-slate-800 text-white"><Link to ="/cart">Cart({cartItems.length}-Items)</Link></li>
                     <li className="hover:text-slate-800 text-white">{loggedInuser}</li>
                 </ul>
             </div>

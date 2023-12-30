@@ -17,7 +17,7 @@ const RestaurantMenu = () => {
   }
   const { name, id, costForTwoMessage, cloudinaryImageId } =
     resInfo.cards[0].card.card.info;
-  // console.log(name,id,costForTwoMessage,cloudinaryImageId);
+  console.log(name,id,costForTwoMessage,cloudinaryImageId);
 
   const categories =
     resInfo.cards[2].groupedCard.cardGroupMap.REGULAR.cards.filter(

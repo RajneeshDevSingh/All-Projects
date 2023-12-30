@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Body from "./components/Body";
 // import About from "./components/About";
 import Contact from "./components/Contact";
+import Cart from "./components/Cart";
 import RestaurantMenu from "./components/RestaurantCard";
 import ErrorPage from "./components/ErrorPage";
 import { createBrowserRouter, RouterProvider , Outlet} from "react-router-dom";
@@ -19,7 +20,7 @@ const About = lazy(()=> import("./components/About"))  // part of bundler read a
 const AppLayout = ()=>
 {
     return (
-        <Provider store = {AppStore}>
+        <Provider store ={AppStore}>
         <div className="app"> 
             <Header/>
             <Outlet/>       {/*   all the children will fill this place */}
@@ -50,6 +51,10 @@ const AppRouter = createBrowserRouter([
                 path:"/restaurants/:resId",  // (/:for dynamic routing)
                 element:<RestaurantMenu/>
             },
+            {
+                path:"/cart",
+                element:<Cart/>
+            }
         ],
         errorElement: <ErrorPage/>
     },
