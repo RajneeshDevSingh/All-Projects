@@ -1,6 +1,6 @@
 import { HiBars4 } from "react-icons/hi2";
 import { HiMiniUserCircle } from "react-icons/hi2";
-import Logo from "../img/Logo";
+import Logo from "../img/logo1.jpg";
 
 import { useState } from "react";
 import "../Allcss/Head.css"
@@ -19,7 +19,7 @@ const Head = () => {
           onChange={(e) => e.target.value}
           value={searchText}
         />
-        <button className="SearchCont">Go</button>
+        <button className="SearchCont">🔍</button>
       </div>
       <div className="userCont">
         <HiMiniUserCircle  className="UserIcon"/>

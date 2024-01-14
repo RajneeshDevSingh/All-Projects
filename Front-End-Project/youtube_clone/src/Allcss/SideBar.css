@@ -1,0 +1,19 @@
+.SideBar_cont
+{
+    height: 85vh;
+    width: 15%;
+    background-color: rgb(143, 237, 237);
+}
+
+.side_Main
+{
+    margin-top: 1rem;
+    padding-left: 1rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+ul
+{
+    padding-left: 1rem;
+}   
