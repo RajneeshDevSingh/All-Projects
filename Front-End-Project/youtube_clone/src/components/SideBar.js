@@ -1,6 +1,14 @@
+import { useSelector } from "react-redux";
 import "../Allcss/SideBar.css"
+
+
+
+
 const SideBar = ()=>
 {
+    const isMenuOpen = useSelector((store)=> store.app.isMenuOpen)
+
+    if(!isMenuOpen) return null;
     return(
         <div className="SideBar_cont">
             <h1 className="side_Main">Home</h1>

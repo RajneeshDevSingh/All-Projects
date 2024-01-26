@@ -4,12 +4,25 @@ import Logo from "../img/logo1.jpg";
 
 import { useState } from "react";
 import "../Allcss/Head.css"
+import { useDispatch } from "react-redux";
+import { toggleMenu } from "../Utils/appSlice";
+
+
+
+
+
+
 const Head = () => {
+  const dispatch = useDispatch();
+  const toggleMenuHandler =()=>
+  {
+    dispatch(toggleMenu())
+  }
   const [searchText, SetSearchText] = useState();
   return (
     <div className="HeadCont">
       <div className="Side1">
-        <HiBars4 className="Menu"/>
+        <HiBars4 className="Menu" onClick={()=> toggleMenuHandler()}/>
    
         <img  className="YoutubeLogo" src={Logo} alt="someImg" />
       </div>

@@ -1,8 +1,10 @@
 .SideBar_cont
 {
     height: 85vh;
-    width: 15%;
-    background-color: rgb(143, 237, 237);
+    /* width: 15%; */
+    background-color: rgb(53, 60, 60);  
+    /*   can grow, can shrink, 50% width,  rgb(28, 26, 26)*/
+    flex: 0 1 15%;
 }
 
 .side_Main
@@ -11,9 +13,11 @@
     padding-left: 1rem;
     font-weight: bolder;
     cursor: pointer;
+    color: white;
 }
 
 ul
 {
     padding-left: 1rem;
+    color: white;
 }   

@@ -9,7 +9,7 @@
 {
     height: 5rem;
     width: 100%;
-    background-color: aqua;
+    background-color:rgb(28, 26, 26);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,6 +30,7 @@
     height: 3rem;
     width: 3rem;
     cursor: pointer;
+    color: white;
 }
 
 .InputArer
@@ -46,12 +47,12 @@
 {
     border-radius: 4rem;
     width: 30rem;
-    background-color: white;
+    background-color: rgb(28, 26, 26);
     border: 2px solid grey;
     font-size: 1rem;
     padding: 20px;
     font-weight: 500;
-
+    color: white;
 }
 
 /* Apply a border to all buttons */
@@ -77,4 +78,5 @@
     width: 3rem;
     font-size: 5erm;
     cursor: pointer;
+    color: white;
 }
