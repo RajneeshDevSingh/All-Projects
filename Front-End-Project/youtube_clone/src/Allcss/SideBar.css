@@ -1,15 +1,14 @@
-.SideBar_cont
+.ChildSideBar
 {
-    height: 85vh;
-    /* width: 15%; */
+    height: auto;
+    width: auto;
     background-color: rgb(53, 60, 60);  
     /*   can grow, can shrink, 50% width,  rgb(28, 26, 26)*/
-    flex: 0 1 15%;
+    /* flex: 0 1 25%; */
 }
 
 .side_Main
 {
-    margin-top: 1rem;
     padding-left: 1rem;
     font-weight: bolder;
     cursor: pointer;

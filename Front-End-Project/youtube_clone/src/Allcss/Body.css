@@ -1,5 +1,17 @@
 .Body_cont
 {
     display: flex;
-    
+    flex-wrap: wrap; 
+}
+
+
+
+.ChildOtherSide
+{
+    flex: 86%;
+}
+
+.ChildSideBar
+{
+   flex: 5%;
 }

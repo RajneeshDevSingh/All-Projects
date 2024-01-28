@@ -4,14 +4,14 @@
     display: flex;
     flex-wrap: wrap;
      /*   can grow, can shrink, 50% width,*/
-     flex: 0 1 85%;
+     background-color: rgb(38, 47, 47);
 }
 
 .BTN
 {
    padding: 0.5rem 0.5rem;
    margin: 0.5rem;
-   background-color: rgb(38, 47, 47);
+   background-color: rgb(19, 22, 22);
    border-radius: 0.5rem;
    font-weight:600;
    color: white;

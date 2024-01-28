@@ -1,0 +1,38 @@
+.allVideos
+{
+    background-color: rgb(27, 21, 21);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: space-between;
+
+}
+
+.OneVideoCont
+{
+    width: 20rem;
+    
+   
+}
+
+.IMG
+{
+    width: 100%;
+    border-radius: 1rem 1rem 0rem 0rem;
+    
+}
+.videosCont
+{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 1rem;
+    font-weight: 600;
+    box-shadow: 1rem;
+}
+
+.liFont
+{
+    font-weight: 400;
+}
