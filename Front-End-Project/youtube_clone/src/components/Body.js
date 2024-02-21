@@ -1,9 +1,9 @@
 import React from "react";
-import MainContiner from "./MainContiner";
-import ButtonList from "./ButtonList";
-import SideBar from "./SideBar";
+import {Outlet} from "react-router-dom";
 
+import SideBar from "./SideBar";
 import "../Allcss/Body.css";
+
 const Body = () => {
   return (
     <div className="Body_cont">
@@ -11,8 +11,8 @@ const Body = () => {
         <SideBar />
       </div>
       <div className="ChildOtherSide">
-        <ButtonList />
-        <MainContiner />
+        <Outlet/>
+        
       </div>
     </div>
   );
