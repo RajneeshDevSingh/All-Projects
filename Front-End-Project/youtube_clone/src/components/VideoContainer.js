@@ -3,6 +3,7 @@ import Youtube_API_URL from "../Utils/Constants";
 import VideoCard from "./VideoCard";
 
 import "../Allcss/VideoCard.css"
+import { Link } from "react-router-dom";
 const VideoContainer = () => {
   const [videos, SetVideos] = useState([]);
   useEffect(() => {
@@ -14,12 +15,14 @@ const VideoContainer = () => {
 
     const json = await data.json();
 
-    console.log(json.items);
+    // console.log(json.items);
     SetVideos(json.items);
   };
   return (
     <div className="allVideos">
-      {videos.map((video) => <VideoCard key={video.id} videosInfo={video} />)}
+      {videos.map((video) => (
+      
+      <Link key={video.id} to={"/watch?v=" + video.id}> <VideoCard  videosInfo={video} /> </Link>))}
       
     </div>
   );

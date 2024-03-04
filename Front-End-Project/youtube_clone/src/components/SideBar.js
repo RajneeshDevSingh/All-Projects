@@ -1,9 +1,6 @@
 import { useSelector } from "react-redux";
 import "../Allcss/SideBar.css"
 
-
-
-
 const SideBar = ()=>
 {
     const isMenuOpen = useSelector((store)=> store.app.isMenuOpen)
