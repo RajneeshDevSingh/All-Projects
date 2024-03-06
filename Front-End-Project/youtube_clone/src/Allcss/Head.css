@@ -66,6 +66,38 @@
     
   }
   
+  .inputSuggestions {
+    position: absolute;
+    left: 0;
+    width: 30rem; /* Adjust width to match inputBox */
+    max-height: auto; /* Adjust as needed */
+    /* overflow-y: auto; */
+    background-color: #222020;
+    color: white;
+    /* border: 1px solid #ccc; */
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin-top: 4%;
+    /* margin-right: 20rem; */
+    margin-left: 34%;
+    border-radius: 1rem;
+  }
+  
+  .inputSuggestions li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .inputSuggestions li:hover {
+    background-color: #f0f0f0;
+    color: black;
+    border-radius: 1rem;
+  }
+
 
 .userCont
 {

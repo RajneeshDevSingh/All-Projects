@@ -9,25 +9,50 @@ import { toggleMenu } from "../Utils/appSlice";
 // import { Youtube_Search_Suggestion_API } from "../Utils/Constants";
 
 import { useEffect } from "react";
-
+import fetchJsonp from "fetch-jsonp";
 const Head = () => {
   const dispatch = useDispatch();
   const toggleMenuHandler = () => {
     dispatch(toggleMenu());
   };
   const [searchQuery, SetSearchQuery] = useState("");
-  // console.log(searchQuery)
+  const [suggestions , SetSuggestions] = useState([]);
+  const[showsuggestions, SetShowsuggestions] = useState(false)
 
-  useEffect(()=>{
-    // make an api call after every key press, but if the difference beween 2 api calls is <200ms decline the api call , if not make the api call
-    getSearchSuggestion();
-  },[searchQuery]);
 
  
-  const getSearchSuggestion = async () => {
-    let data = await fetch(`https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=${searchQuery}`)
-    const jsonData = await data.json();
-    console.log(jsonData[1]);
+  // make an api call after every key press, but if the difference beween 2 api calls is <200ms decline the api call , if not make the api call
+
+  // *key - i
+  // render the component
+  // useEffect();
+  // start timer make api call after 200 ms
+
+  // * key - ip
+  // destroy the component (useEffect return method)
+  // re-render the component
+  // useEffec()
+  // start timer make api call after 200 ms
+
+  useEffect(() => {
+    const timer = setTimeout(() => getSearchSuggestion(), 200);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [searchQuery]);
+
+  let getSearchSuggestion = async () => {
+    try {
+      const response = await fetchJsonp(
+        `https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=${searchQuery}`
+      );
+      const data = await response.json();
+      SetSuggestions(data[1])
+      // console.log(data[1]);
+    } catch (error) {
+      console.error("Error fetching search suggestions:", error);
+    }
   };
 
   return (
@@ -37,15 +62,29 @@ const Head = () => {
 
         <img className="YoutubeLogo" src={Logo} alt="someImg" />
       </div>
+
       <div className="InputArer">
         <input
           className="inputBox"
           type="text"
           onChange={(e) => SetSearchQuery(e.target.value)}
           value={searchQuery}
+          onFocus={()=> SetShowsuggestions(true)}
+          onBlur={()=> SetShowsuggestions(false)}
         />
         <button className="SearchCont">🔍</button>
+    
+        {showsuggestions && <ul className="inputSuggestions">
+          {
+            suggestions.map((suggestion) => (
+             <li key={suggestion}>🔍 {suggestion}</li>
+            ))
+          }
+
+        </ul>}
       </div>
+
+
       <div className="userCont">
         <HiMiniUserCircle className="UserIcon" />
       </div>
