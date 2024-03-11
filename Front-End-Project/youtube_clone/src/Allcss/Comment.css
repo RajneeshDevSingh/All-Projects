@@ -1,0 +1,49 @@
+.CommentDiv{
+    background-color: rgb(22, 20, 20);
+}
+
+.comment{
+    padding: 1rem;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: white;
+
+}
+
+
+.SingleComment
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+
+}
+.commentIcon
+{
+    height: 3rem;
+    width: 3rem;
+    color: white;
+    margin-top: 1rem;
+    
+}
+
+.commnetdata
+{
+    color: white;
+
+}
+
+.name
+{
+    font-weight: bold;
+    margin-top: 0.8rem;
+}
+
+.repliesCont
+{
+    margin-left: 2rem;
+    border: 2px solid red;
+    margin-top: -2.5rem;
+}
