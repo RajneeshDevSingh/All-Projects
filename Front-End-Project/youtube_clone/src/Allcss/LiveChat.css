@@ -1,0 +1,61 @@
+
+
+.ChatMessage
+{
+    display: flex;
+    margin-bottom: 0.5rem;
+    
+    
+}
+.ChatIconIcon
+{
+    
+    height: 2rem;
+    width: 2rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    filter: brightness(0) invert(1);
+
+}
+.chatInfo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatName {
+    font-weight: bold;
+    flex-wrap: wrap;
+}
+
+.chatMessage {
+    color: white;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.MyChat
+{
+    outline: none;
+    width: 75%;
+    height: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2px;
+    padding-left: 1rem;
+    border: 3px solid black;
+    font-weight: 500;
+}
+
+.sendChat
+{
+    height: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2px;
+    font-weight: bold;
+    color: green;
+    border: 2px solid greenyellow;
+    width: 20%;
+}
+
+

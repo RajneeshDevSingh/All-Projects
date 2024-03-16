@@ -1,7 +1,7 @@
 import { HiBars4 } from "react-icons/hi2";
 import { HiMiniUserCircle } from "react-icons/hi2";
-import Logo from "../img/logo1.jpg";
-
+import Logo from "../img/icon_logo.jpeg";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import "../Allcss/Head.css";
 import { useDispatch, useSelector } from "react-redux";
@@ -78,7 +78,7 @@ const Head = () => {
       <div className="Side1">
         <HiBars4 className="Menu" onClick={() => toggleMenuHandler()} />
 
-        <img className="YoutubeLogo" src={Logo} alt="someImg" />
+        <a href="/"><img className="YoutubeLogo" src="https://p7.hiclipart.com/preview/362/340/906/youtube-logo-streaming-media-youtube-logo.jpg" alt="someImg" /></a>
       </div>
 
       <div className="InputArer">

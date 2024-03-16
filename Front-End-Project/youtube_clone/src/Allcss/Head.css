@@ -23,6 +23,7 @@
     height: 5rem;
     padding: 1rem;
     gap: 2rem;
+  
 }
 
 .Menu  
@@ -33,6 +34,17 @@
     color: white;
 }
 
+
+.YoutubeLogo
+{
+  padding: 0.8rem;
+  height: 4rem;
+  width: 8rem;
+  background: none  ;
+  margin-top: -0.5rem;
+  border-radius: 1rem;
+
+}
 .InputArer
 {
     display: flex;

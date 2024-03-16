@@ -5,6 +5,7 @@ import { useSearchParams } from 'react-router-dom';
 import CommentContainer from './CommentContainer';
 
 import "../Allcss/watchPage.css"
+import LiveChat from './LiveChat';
 const WatchPage = ()=>
 {
     const [searchParams] = useSearchParams();
@@ -24,6 +25,8 @@ const WatchPage = ()=>
         allowFullScreen>
         </iframe>
     </div>
+
+    <div className='LiveChat'><LiveChat/></div>
     <div className='commentsSection'>
         <CommentContainer/>
     </div>
