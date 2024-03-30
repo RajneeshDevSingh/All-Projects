@@ -2,18 +2,25 @@ import React, { useState, useRef } from "react";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/Firebase";
 import Header from "./Header";
 import "../AllCSS/Login.css";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice";
 
 const Login = () => {
   const [isSignIn, setISsignIn] = useState(true);
   const [isRotated, setIsRotated] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
+  const Name = useRef()
   const Email = useRef(null);
   const Password = useRef(null);
   const ConfirmPassword = useRef(null)
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
   const HandleToggle = () => {
     setISsignIn(!isSignIn);
     setIsRotated(!isRotated);
@@ -34,7 +41,20 @@ const Login = () => {
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user;
-          console.log(user);
+
+          updateProfile(user, {
+            displayName: Name.current.value,
+          }).then(() => {
+            // Profile updated!
+            const { uid, email, displayName } = auth.currentUser;
+            dispatch(addUser({uid:uid, email:email, displayName:displayName}))
+          navigate("/browse")
+          }).catch((error) => {
+            // An error occurred
+            setErrorMessage(error.message)
+          });
+
+          
           // ...
         })
         .catch((error) => {
@@ -54,6 +74,7 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
+          navigate("/browse")
           // ...
         })
         .catch((error) => {
@@ -100,7 +121,7 @@ const Login = () => {
         onSubmit={(e) => e.preventDefault()}
       >
         <h2 className="SignIn">{isSignIn ? "Sign Up" : "Sign In"}</h2>
-        {isSignIn && <input className="input" type="text" placeholder="Name" required/>}
+        {isSignIn && <input className="input" type="text" placeholder="Name" ref={Name} required/>}
         <input
           className="input"
           placeholder="Email address"
