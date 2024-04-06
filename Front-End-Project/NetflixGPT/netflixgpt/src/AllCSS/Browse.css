@@ -1,23 +1,8 @@
-.BrowseHeader
+.HeaderBrowser
 {
-    display: flex;
-    height: 5rem;
-    width: 100%;
-    justify-content: space-between;
-    background-color: rgba(23, 22, 22, 0.941);
-
+display: flex;
+justify-content: flex-end;
+align-items: center;
 
 }
 
-.logoutBtn
-{
-    margin-right: 1rem;
-    cursor: pointer;
-    height: 2rem;
-    border-radius: 0.3rem;
-    margin-top: 1.5rem;
-    background-color: red;
-    outline: none;
-    border: none;
-    font-weight: bold;
-}

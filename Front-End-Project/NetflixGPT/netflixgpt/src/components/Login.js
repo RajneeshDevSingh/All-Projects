@@ -10,16 +10,16 @@ import "../AllCSS/Login.css";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
-
+import {BG_URL } from '../utils/Constant'
 const Login = () => {
-  const [isSignIn, setISsignIn] = useState(true);
+  const [isSignIn, setISsignIn] = useState(false);
   const [isRotated, setIsRotated] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
   const Name = useRef()
   const Email = useRef(null);
   const Password = useRef(null);
   const ConfirmPassword = useRef(null)
-  const navigate = useNavigate()
+  
   const dispatch = useDispatch()
   const HandleToggle = () => {
     setISsignIn(!isSignIn);
@@ -48,7 +48,7 @@ const Login = () => {
             // Profile updated!
             const { uid, email, displayName } = auth.currentUser;
             dispatch(addUser({uid:uid, email:email, displayName:displayName}))
-          navigate("/browse")
+          // navigate("/browse")
           }).catch((error) => {
             // An error occurred
             setErrorMessage(error.message)
@@ -74,8 +74,6 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          navigate("/browse")
-          // ...
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -112,10 +110,11 @@ const Login = () => {
   };
 
   return (
-    <div className="LoginPage">
-      <div>
-        <Header />
-      </div>
+    <div className="LoginPage" style={{background:`url(../utils/Constant)`,     
+ }}>
+
+        <Header/>
+  
       <form
         className={`LoginCont ${isRotated ? "rotate" : ""}`}
         onSubmit={(e) => e.preventDefault()}
@@ -156,6 +155,9 @@ const Login = () => {
           Now
         </p>
       </form>
+      <div>
+      <img className="backimg" src={BG_URL} alt='BG img'/>
+      </div>
     </div>
   );
 };
