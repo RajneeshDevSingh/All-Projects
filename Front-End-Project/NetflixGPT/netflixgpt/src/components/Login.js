@@ -44,10 +44,12 @@ const Login = () => {
 
           updateProfile(user, {
             displayName: Name.current.value,
+            
           }).then(() => {
             // Profile updated!
             const { uid, email, displayName } = auth.currentUser;
             dispatch(addUser({uid:uid, email:email, displayName:displayName}))
+            console.log(displayName)
           // navigate("/browse")
           }).catch((error) => {
             // An error occurred
