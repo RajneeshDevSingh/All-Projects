@@ -5,19 +5,18 @@ import "../AllCSS/Login.css"
 const VideoBackground = ({ movieID }) => {
 
   const trailerVideoID = useSelector(store => store.movies?.trailerVideo ) 
-  // console.log(trailerVideoID);
   
 useMovieTrailer(movieID)
 
   return (
     <div className="BackGroundVideo">
-      <iframe
-      className="BackgroundTrailer"
-        src={"https://www.youtube.com/embed/"+trailerVideoID?.key}
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerPolicy="strict-origin-when-cross-origin"
-      ></iframe>
+    <iframe 
+    className="BackgroundTrailer"
+    src={"https://www.youtube.com/embed/" + trailerVideoID?.key + "?&autoplay=1&mute=1&rel=0&showinfo=0&controls=0&loop=1"}
+    title="YouTube video player"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+  ></iframe>
     </div>
   );
 };

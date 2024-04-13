@@ -1,0 +1,71 @@
+.SecondPart
+{
+    background-color: black;
+}
+
+.MovieCont
+{
+    margin-top: -25rem;
+    position: relative;
+    z-index: 3;
+    
+    
+}
+
+.MovieList
+{
+    margin-top: 5rem;
+    margin-bottom: 26rem;
+
+}
+
+.Movies {
+    display: flex;
+    margin: 0 1rem;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem 1rem;
+    overflow-x: scroll; /* Hide horizontal scrollbar */
+    overflow-y: hidden; /* Hide vertical scrollbar */
+  }
+  
+  /* Hide scrollbar for Firefox */
+  .Movies::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for Edge and IE */
+  .Movies {
+    -ms-overflow-style: none;
+  }
+  
+  /* Hide scrollbar for Chrome, Safari, and Opera */
+  .Movies {
+    scrollbar-width: none;
+  }
+  
+
+.MoviePoster {
+    height: 12rem;
+    width: 12rem;
+    border-radius: 0.5rem;
+    transition: all 0.4s ease; /* Add transition for smooth effect */
+  }
+  
+  .MoviePoster:hover {
+    height: 13rem;
+    width: 13rem;
+    cursor: pointer;
+  }
+
+  .MovieTitle
+  {
+    margin-left: 1rem;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom:0.5rem;
+  }
+
+ 
+  

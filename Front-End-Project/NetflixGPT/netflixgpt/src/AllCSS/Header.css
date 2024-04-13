@@ -4,20 +4,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     width: 100%;
-    background:transparent;
-    position:fixed;
-    left:0;
-    top:0;
-    background: linear-gradient(to bottom, black, transparent); 
-    /* transition:background 0.5s ease; */
+    z-index: 2;
+    position: absolute;
+   
 }
 
 .logo
 {
-    height: 7rem;
-    width: 15rem;
+    height: 5rem;
+    width: 12rem;
 }
 
 .logoutBtn
