@@ -19,8 +19,22 @@
 .logoutBtn
 {   
     height: 3rem;
-    margin-right: 1rem;
-    width: 5rem;
+    margin-right: 2rem;
+    /* width: 5rem; */
+    cursor: pointer;
+    border-radius: 0.3rem;
+    background-color: red;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.GPTBtn
+{
+    height: 3rem;
+    margin-right: 4rem;
+    font-size: 1rem;
     cursor: pointer;
     border-radius: 0.3rem;
     background-color: red;
@@ -28,7 +42,6 @@
     border: none;
     font-weight: bold;
 }
-
 
 
 

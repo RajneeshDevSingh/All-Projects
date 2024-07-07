@@ -13,3 +13,12 @@ export const LOGO =
   };
 
   export const IMG_CDN = "https://image.tmdb.org/t/p/w500"
+
+
+
+  export const OpenAI_GPTKey = "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"
+  
+  // "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"
+  //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
+
+  

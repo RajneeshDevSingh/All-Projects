@@ -46,15 +46,15 @@
   
 
 .MoviePoster {
-    height: 12rem;
-    width: 12rem;
+    height: 17rem;
+    width: 15rem;
     border-radius: 0.5rem;
     transition: all 0.4s ease; /* Add transition for smooth effect */
   }
   
   .MoviePoster:hover {
-    height: 13rem;
-    width: 13rem;
+    height: 18.5rem;
+    width: 16.5rem;
     cursor: pointer;
   }
 

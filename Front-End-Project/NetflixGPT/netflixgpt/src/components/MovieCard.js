@@ -1,13 +1,22 @@
-import React from 'react'
-import {IMG_CDN} from "../utils/Constant"
+import React, { useEffect } from 'react'
+import {API_Options, IMG_CDN} from "../utils/Constant"
 import "../AllCSS/Secondary.css"
-const MovieCard = ({posterPath}) => {
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
+
+
+const MovieCard = ({posterPath,OneMovie}) => {
+  // console.log(OneMovie.title)
+
+
+  
   return (
     <div className='MovieCard'>
-      <img className="MoviePoster" alt="Movie IMG" src={IMG_CDN + posterPath}/>
-      {/* <h1>Hello</h1> */}
+      <Link to="/browse/movie-overview">
+      <img className="MoviePoster" alt="Movie IMG" src={IMG_CDN + posterPath} overView={OneMovie}/>
+      </Link>
       
-    </div>
+      </div>
   )
 }
 

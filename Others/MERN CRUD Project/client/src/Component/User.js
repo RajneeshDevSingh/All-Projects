@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 
 const User = () => {
-    const [userData, setuserData] = useState([{name:"RDS",email:"abc@gmail.com",age:24}])
+    const [userData, setuserData] = useState([{name:"RDS",email:"abc@gmail.com",age:24},{name:"RDS",email:"abc@gmail.com",age:24},{name:"RDS",email:"abc@gmail.com",age:24},{name:"RDS",email:"abc@gmail.com",age:24}])
   return (
     <div className='d-flex vh-100  bg-primary justify-content-center align-item-center'>
         <div className='m-5  w-50 bg-white rounded p-5'>
-            <Link to="/CreateUser"><button>New user +</button></Link>
+            <Link to="/CreateUser"><button className='btn btn-success'>New user +</button></Link>
             <table className='table'>
                 <thead>
                     <tr>
@@ -22,7 +22,7 @@ const User = () => {
                             <td>{user.name}</td>
                             <td>{user.email}</td>
                             <td>{user.age}</td>
-                            <td><button>Edit</button><button>Delete</button></td>
+                            <td><Link to="/UpdateUser"><button>Edit</button></Link><button>Delete</button></td>
                             </tr>
                         ))}
                 </tbody>

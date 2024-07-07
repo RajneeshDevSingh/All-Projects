@@ -10,10 +10,12 @@ import { useEffect } from "react";
 import {onAuthStateChanged } from "firebase/auth";
 import { addUser, removeUser } from "../utils/userSlice";
 
-import { useDispatch} from "react-redux";
+import { useDispatch, useSelector} from "react-redux";
+import { toggleGptSearchView } from '../utils/gptSearchSlice'
 const Header = () => {
   const location = useLocation();
   const dispatch = useDispatch();
+  const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
   const isNotBrowsePage = location.pathname !== '/browse';
   const navigate = useNavigate()
   
@@ -47,12 +49,21 @@ const Header = () => {
   // An error happened.
   navigate("/error")
 });
+
+
   }
+  const HandleGPTSearch =()=>
+{
+  dispatch(toggleGptSearchView())
+}
 
   return (
       <div className='Upper'>
       <img className="logo" src={LOGO} alt='Logo'/>
-      {!isNotBrowsePage && <button className='logoutBtn' onClick={HandleLogout}>Log out</button>}
+      {!isNotBrowsePage && <div>
+      <button className='GPTBtn' onClick={HandleGPTSearch}>{showGptSearch ? "Home" : "GPT Search"}</button>
+      <button className='logoutBtn' onClick={HandleLogout}>Log out</button>
+      </div>}
       </div>
   )
 }
