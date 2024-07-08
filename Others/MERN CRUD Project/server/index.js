@@ -19,6 +19,8 @@ app.listen(3001, () => {
     console.log("Server running on port 3001");
 });
 
+
+
 app.post("/CreateUser", (req, res) => {
     console.log("Request Body:", req.body); // Log the request body for debugging
 
@@ -33,3 +35,45 @@ app.post("/CreateUser", (req, res) => {
         res.json(err);
     });
 });
+
+app.get("/" , (req, res)=>
+    {
+        UserModels.find({})
+        .then(users => res.json(users))
+        .catch(err => res.json(err))
+    })
+
+
+
+
+app.get("/UpdateUser/:id" , (req, res)=>
+{
+    const id = req.params.id;
+    UserModels.findById({_id:id})
+    .then(users => res.json(users))
+    .catch(err => res.json(err))
+})
+
+app.put("/UpdateUser/:id" , (req, res)=>
+{
+    const id = req.params.id;
+    UserModels.findOneAndReplace({_id: id}, 
+        {
+            name:req.body.name,
+            email:req.body.email,
+            age:req.body.age
+        }
+    )
+    .then(users => res.json(users))
+    .catch(err => res.json(err))
+})
+
+
+app.delete("/deleteUser/:id" , (req, res)=>
+{
+    const id = req.params.id;
+    UserModels.findOneAndDelete({_id:id})
+    .then(users => res.json(users))
+    .catch(err => res.json(err))
+
+})

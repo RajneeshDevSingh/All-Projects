@@ -1,10 +1,26 @@
-import React, { useState } from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 
 const User = () => {
-    const [userData, setuserData] = useState([{name:"RDS",email:"abc@gmail.com",age:24},{name:"RDS",email:"abc@gmail.com",age:24},{name:"RDS",email:"abc@gmail.com",age:24},{name:"RDS",email:"abc@gmail.com",age:24}])
+    const [userData, setuserData] = useState([])
+    useEffect(()=>
+    {
+        axios.get("http://127.0.0.1:3001")
+        .then(res => setuserData(res.data))
+        .catch(err=> console.log("Server unavaiale to fetch data :-",err))
+        
+    },[])
+
+    const HandleDelete =(id)=>
+    {
+        axios.delete("http://127.0.0.1:3001/deleteUser/"+id)
+        .then(res => console.log("Data deleted successfully", res),
+                      window.location.reload())
+        .catch(err=> console.log("While deleting data some error", err))
+    }
   return (
-    <div className='d-flex vh-100  bg-primary justify-content-center align-item-center'>
+    <div className='d-flex bg-primary justify-content-center align-item-center'>
         <div className='m-5  w-50 bg-white rounded p-5'>
             <Link to="/CreateUser"><button className='btn btn-success'>New user +</button></Link>
             <table className='table'>
@@ -22,7 +38,7 @@ const User = () => {
                             <td>{user.name}</td>
                             <td>{user.email}</td>
                             <td>{user.age}</td>
-                            <td><Link to="/UpdateUser"><button>Edit</button></Link><button>Delete</button></td>
+                            <td><Link to={`/UpdateUser/${user._id}`}><button className='btn btn-success'>Edit</button></Link><button className='btn btn-danger' onClick={(e)=> HandleDelete(user._id)}>Delete</button></td>
                             </tr>
                         ))}
                 </tbody>

@@ -13,7 +13,7 @@ const routePaths = createBrowserRouter([
     element:<User/>
   },
   {
-    path:"/UpdateUser",
+    path:"/UpdateUser/:id",
     element:<UpdateUser/>
   },
   {

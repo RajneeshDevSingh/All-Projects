@@ -1,18 +1,23 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
 
 const CreateUser = () => {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [email, setEmail] = useState("");
+  const navigate = useNavigate()
 
   function handleSubmit(e) {
     e.preventDefault();
     const userData = { name, age, email };
     console.log("Submitting User Data:", userData); // Log the data being submitted
     axios.post("http://127.0.0.1:3001/CreateUser", userData)
-      .then(res => console.log("Response from server", res))
+      .then(res => {console.log("Response from server", res);
+        
+          navigate("/");
+        
+      })
       .catch(err => console.log("Error from server -:", err));
   }
 
